@@ -1,9 +1,9 @@
-import './Style'
+import './Style.css'
 
 
 function Card() {
   return(
-    <div>
+    <div className='Card'>
 
     </div>
   );
