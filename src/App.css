@@ -10,3 +10,8 @@
   margin : auto;
 }
 
+.Cards {
+  width: 100%;
+  height : 70vh;
+  margin-top : 70px;
+}

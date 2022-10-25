@@ -6,6 +6,10 @@ function App() {
   return (
     <div className='Container'>
       <Header />
+
+      <div className='Cards'>
+        
+      </div>
     </div>
   )
 }
