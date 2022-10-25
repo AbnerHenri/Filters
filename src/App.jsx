@@ -7,7 +7,7 @@ import Card from './Components/Card/Card'
 
 function App() {
 
-  const [repos, setRepos] = useState(null)
+  const [repos, setRepos] = useState([])
 
   useEffect(()=> {
 
@@ -18,16 +18,15 @@ function App() {
 
   }, [])
 
-  console.log(repos)
 
   return (
     <div className='Container'>
       <Header />
 
       <div className='Cards'>
-        <Card />
-        <Card />
-        <Card />
+        {
+          repos.map( e => <Card name={e.name} language={e.language} type={e.visibility} />)
+        }
       </div>
     </div>
   )
