@@ -1,9 +1,23 @@
 import './Style.css'
 
 import Code from '../../Assets/Code.png'
+
+import JS from '../../Assets/JS.png'
+
 import Visibility from '../../Assets/Visibility.png'
 
 function Card(props) {
+
+  function imgTech(type){
+    switch (type) {
+      case 'JavaScript':
+        return JS  
+
+    
+      default:
+        return Code;
+    }
+  }
 
   return(
     <div className='Card'>
@@ -13,7 +27,7 @@ function Card(props) {
         
         <div className='Content'>
           <div className='Lang'>
-            <img src={Code} alt='Code' />
+            <img src={imgTech(props.language)} alt='Code' />
             <p>{props.language}</p>
           </div>
 
