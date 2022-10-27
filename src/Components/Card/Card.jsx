@@ -3,6 +3,8 @@ import './Style.css'
 import Code from '../../Assets/Code.png'
 
 import JS from '../../Assets/JS.png'
+import TS from '../../Assets/TS.png'
+
 
 import Visibility from '../../Assets/Visibility.png'
 
@@ -12,6 +14,9 @@ function Card(props) {
     switch (type) {
       case 'JavaScript':
         return JS  
+
+      case 'TypeScript':
+        return TS
 
     
       default:
