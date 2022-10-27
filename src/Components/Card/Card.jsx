@@ -4,6 +4,7 @@ import Code from '../../Assets/Code.png'
 
 import JS from '../../Assets/JS.png'
 import TS from '../../Assets/TS.png'
+import PHP from '../../Assets/PHP.png'
 
 
 import Visibility from '../../Assets/Visibility.png'
@@ -18,7 +19,9 @@ function Card(props) {
       case 'TypeScript':
         return TS
 
-    
+      case 'PHP':
+        return PHP
+
       default:
         return Code;
     }
