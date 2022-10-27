@@ -32,3 +32,14 @@
 
     border-radius: 0px 0px 7px 7px;
 }
+
+.Lang {
+    display: flex;
+    align-items: center;
+    font-size: 17px;
+}
+
+.Lang img {
+    width: 20px;
+    transform: translate(-3px, -1px);
+}

@@ -1,7 +1,9 @@
 import './Style.css'
 
+import Code from '../../Assets/Code.png'
 
 function Card(props) {
+
   return(
     <div className='Card'>
         <div className='Title'>
@@ -9,7 +11,10 @@ function Card(props) {
         </div>
         
         <div className='Content'>
-          <p>{props.language}</p>
+          <div className='Lang'>
+            <img src={Code} alt='Code' />
+            <p>{props.language}</p>
+          </div>
           <p>{props.type}</p>
         </div> 
     </div>
