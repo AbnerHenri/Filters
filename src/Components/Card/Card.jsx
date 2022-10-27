@@ -1,6 +1,7 @@
 import './Style.css'
 
 import Code from '../../Assets/Code.png'
+import Visibility from '../../Assets/Visibility.png'
 
 function Card(props) {
 
@@ -15,7 +16,11 @@ function Card(props) {
             <img src={Code} alt='Code' />
             <p>{props.language}</p>
           </div>
-          <p>{props.type}</p>
+
+          <div className='Visibility'>
+            <img src={Visibility} alt='Eye' />
+            <p>{props.type}</p>
+          </div> 
         </div> 
     </div>
   );

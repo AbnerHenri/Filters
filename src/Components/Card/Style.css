@@ -36,10 +36,24 @@
 .Lang {
     display: flex;
     align-items: center;
-    font-size: 17px;
+    font-size: 18px;
+    font-weight: bold;
 }
 
 .Lang img {
+    width: 20px;
+    transform: translate(-3px, -1px);
+}
+
+.Visibility {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    font-weight: bold;
+    color : gray
+}
+
+.Visibility img {
     width: 20px;
     transform: translate(-3px, -1px);
 }
