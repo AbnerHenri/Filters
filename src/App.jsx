@@ -15,6 +15,7 @@ function App() {
         const Res = await fetch('https://api.github.com/users/AbnerHenri/repos')
         await Res.json().then(res => { 
           res.shift()
+          res.pop()
           setRepos(res)
          })
       })()
