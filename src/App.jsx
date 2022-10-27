@@ -9,6 +9,10 @@ function App() {
 
   const [repos, setRepos] = useState([])
 
+  const filtered = repos.filter((e)=> {
+    e.name.startsWith() || e.language.startsWith()
+  })
+
   useEffect(()=> {
 
       (async function Res() {
@@ -22,8 +26,7 @@ function App() {
 
   }, [])
 
-  console.log(repos)
-
+  
   return (
     <div className='Container'>
       <Header />
