@@ -10,19 +10,15 @@
     border : none;
     border-radius: 7px;
 
-    background: #f8f8ff;
+    background: azure;
 }
 
 .Title {
     width: 100%;
-
-    border-bottom: 1px solid black;
     border-radius: 15px 15px 0px 0px;
+    border-bottom: 1px solid #222;
 
     padding : 5px;
-    border-radius: 15px 15px 0px 0px;
-
-    
 }
 
 .Content {
@@ -33,4 +29,6 @@
 
     align-items: center;
     justify-content: space-around;
+
+    border-radius: 0px 0px 7px 7px;
 }
