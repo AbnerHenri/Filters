@@ -6,6 +6,7 @@ import JS from '../../Assets/JS.png'
 import TS from '../../Assets/TS.png'
 import PHP from '../../Assets/PHP.png'
 import CSS from '../../Assets/CSS.png'
+import Python from '../../Assets/Python.png'
 
 
 import Visibility from '../../Assets/Visibility.png'
@@ -25,6 +26,9 @@ function Card(props) {
 
       case 'CSS':
         return CSS
+
+      case 'Python':
+        return Python
 
       default:
         return Code;
