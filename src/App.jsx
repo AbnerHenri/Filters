@@ -13,11 +13,15 @@ function App() {
 
       (async function Res() {
         const Res = await fetch('https://api.github.com/users/AbnerHenri/repos')
-        await Res.json().then(res => { setRepos(res) })
+        await Res.json().then(res => { 
+          res.shift()
+          setRepos(res)
+         })
       })()
 
   }, [])
 
+  console.log(repos)
 
   return (
     <div className='Container'>

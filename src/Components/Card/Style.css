@@ -1,4 +1,7 @@
 .Card {
+    display : flex;
+    flex-direction: column;
+
     width: 90%;
     height : 100px;
 
@@ -6,5 +9,25 @@
     box-shadow: 5px 5px 8px ;
 
     border : none;
-    border-radius: 15px;
+    border-radius: 7px;
+}
+
+.Title {
+    width: 100%;
+
+    border-bottom: 1px solid black;
+    border-radius: 15px 15px 0px 0px;
+
+    padding : 5px;
+    border-radius: 15px 15px 0px 0px;
+}
+
+.Content {
+    width: 100%;
+
+    display: flex;
+    flex : 1;
+
+    align-items: center;
+    justify-content: space-around;
 }
