@@ -31,6 +31,8 @@ function App() {
     <div className='Container'>
       <Header />
 
+      <input type={'text'} placeholder={'Search'} className='Search' />
+
       <div className='Cards'>
         {
           repos.map( e => <Card name={e.name} language={e.language} type={e.visibility} />)
