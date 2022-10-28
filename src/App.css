@@ -34,5 +34,16 @@
 }
 
 .Search {
-  
+  width: 45%;
+  border : 2px solid #ccc;
+  border-radius: 15px;
+
+  padding : 12px;
+
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.Search:focus, .Search::placeholder {
+  outline: none;
+  color : #ccc
 }
