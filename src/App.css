@@ -21,3 +21,11 @@
   gap : 15px;
   justify-items: center;
 }
+
+.Filters {
+  transform: translateY(50px);
+}
+
+.Search {
+  
+}

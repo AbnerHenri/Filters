@@ -31,7 +31,9 @@ function App() {
     <div className='Container'>
       <Header />
 
-      <input type={'text'} placeholder={'Search'} className='Search' />
+      <div className='Filters'>
+        <input type={'text'} placeholder={'Search'} className='Search' />
+      </div>
 
       <div className='Cards'>
         {
