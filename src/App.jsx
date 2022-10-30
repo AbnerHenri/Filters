@@ -15,7 +15,7 @@ function App() {
       (async function Res() {
         fetch('https://api.github.com/users/AbnerHenri/repos')
         .then(res => res.json())
-        .then(data => setRepos())
+        .then(data => setRepos(data))
         
       })()
 
