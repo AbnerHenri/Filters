@@ -8,36 +8,36 @@ import Card from './Components/Card/Card'
 function App() {
 
   const [repos, setRepos] = useState([])
-
-  const filtered = repos.filter((e)=> {
-    e.name.startsWith() || e.language.startsWith()
-  })
+  const [search, setSearch] = useState('')
 
   useEffect(()=> {
 
       (async function Res() {
-        const Res = await fetch('https://api.github.com/users/AbnerHenri/repos')
-        await Res.json().then(res => { 
-          res.shift()
-          res.pop()
-          setRepos(res)
-         })
+        fetch('https://api.github.com/users/AbnerHenri/repos')
+        .then(res => res.json())
+        .then(data => setRepos())
+        
       })()
 
   }, [])
-
   
   return (
     <div className='Container'>
       <Header />
 
       <div className='Filters'>
-        <input type={'text'} placeholder={'Search'} className='Search' />
+        <input
+          type={'text'}
+          placeholder={'Search'} 
+          className='Search' 
+          onChange={(e)=> setSearch(e.target.value)}
+          value={search}
+        />
       </div>
 
       <div className='Cards'>
-        {
-          repos.map( e => <Card name={e.name} language={e.language} type={e.visibility} />)
+        {         
+          repos.map(e => <Card name={e.name} language={e.language} type={e.visibility} />)
         }
       </div>
     </div>
