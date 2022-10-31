@@ -37,8 +37,10 @@ function App() {
       }
     })
 
+    // console.log(newRepos)
+
     let filtred = newRepos.filter((e)=> (
-      e.startsWith(value)
+      e.name.startsWith(value)
     ))
 
 
