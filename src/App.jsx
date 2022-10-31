@@ -7,7 +7,8 @@ import Card from './Components/Card/Card'
 
 function App() {
 
-  
+  const [initialRepos, setInitialRepos] = useState([])
+  const [repos, setRepos] = useState([])
 
   return (
     <div className='Container'>
@@ -18,7 +19,6 @@ function App() {
           type={'text'}
           placeholder={'Search'} 
           className='Search' 
-          // onChange={(e)=> setSearch(e.target.value)}
           value={search}
         />
       </div>
