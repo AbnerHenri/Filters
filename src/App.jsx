@@ -40,7 +40,7 @@ function App() {
     // console.log(newRepos)
 
     let filtred = newRepos.filter((e)=> (
-      e.name.startsWith(value)
+      e.name.includes(value)
     ))
 
 
