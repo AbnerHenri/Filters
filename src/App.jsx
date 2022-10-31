@@ -9,7 +9,6 @@ function App() {
 
   const [initialRepos, setInitialRepos] = useState([])
   const [repos, setRepos] = useState([])
-  const [search, setSearch] = useState('')
 
   useEffect(()=>{
     const fetchRepos = async () =>{
@@ -22,7 +21,11 @@ function App() {
     fetchRepos()
   }, [])
 
-  console.log(search)
+  // const handleChange = ({ target }) => {
+  //   const filtred = repos.filter((e)=>{
+  //     e.name.includes()
+  //   })
+  // }
 
   return (
     <div className='Container'>
@@ -33,8 +36,7 @@ function App() {
           type={'text'}
           placeholder={'Search'} 
           className='Search' 
-          value={search}
-          onChange={(e)=> setSearch(e.target.value)}
+          // onChange={(e)=> setSearch(e.target.value)}
         />
       </div>
 
