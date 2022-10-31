@@ -47,3 +47,9 @@
   outline: none;
   color : #ccc
 }
+
+@media (max-width : 1115px) {
+    .Cards {
+      grid-template-columns: 1fr 1fr;
+    }
+}
