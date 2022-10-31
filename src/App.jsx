@@ -29,9 +29,18 @@ function App() {
       return;
     }
 
-    console.log(repos.name)
+    const newRepos = repos.map((e)=> {
+      return {
+        name : e.name.toLowerCase(),
+        language : e.language,
+        visibility : e.visibility
+      }
+    })
 
-    let filtred = repos.filter((e)=> e.name.startsWith(value))
+    let filtred = newRepos.filter((e)=> (
+      e.startsWith(value)
+    ))
+
 
     setRepos(filtred)
   }
@@ -50,7 +59,7 @@ function App() {
       </div>
 
       <div className='Cards'>
-        {         
+        {    
           repos.map(e => <Card name={e.name} language={e.language} type={e.visibility} />)
         }
       </div>
