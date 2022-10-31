@@ -22,6 +22,8 @@ function App() {
     fetchRepos()
   }, [])
 
+  console.log(search)
+
   return (
     <div className='Container'>
       <Header />
@@ -31,7 +33,8 @@ function App() {
           type={'text'}
           placeholder={'Search'} 
           className='Search' 
-          // value={search}
+          value={search}
+          onChange={(e)=> setSearch(e.target.value)}
         />
       </div>
 
