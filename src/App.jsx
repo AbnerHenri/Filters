@@ -26,6 +26,8 @@ function App() {
       name.includes(target.value) ||
       language.includes(target.values)
     })
+
+    setRepos(filtred)
   }
 
   return (
