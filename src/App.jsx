@@ -10,6 +10,15 @@ function App() {
   const [initialRepos, setInitialRepos] = useState([])
   const [repos, setRepos] = useState([])
 
+  useEffect(()=>{
+    const fetchRepos = async () =>{
+      const Response = await fetch('https://api.github.com/users/AbnerHenri/repos')
+      const Data = await Response.json()
+      setInitialRepos(Data)
+      setRepos(Data)
+    }
+  }, [])
+
   return (
     <div className='Container'>
       <Header />
