@@ -21,11 +21,12 @@ function App() {
     fetchRepos()
   }, [])
 
-  // const handleChange = ({ target }) => {
-  //   const filtred = repos.filter((e)=>{
-  //     e.name.includes()
-  //   })
-  // }
+  const handleChange = ({ target }) => {
+    const filtred = repos.filter(({ name, language })=>{
+      name.includes(target.value) ||
+      language.includes(target.values)
+    })
+  }
 
   return (
     <div className='Container'>
