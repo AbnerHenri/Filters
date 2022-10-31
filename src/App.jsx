@@ -37,7 +37,7 @@ function App() {
           type={'text'}
           placeholder={'Search'} 
           className='Search' 
-          // onChange={(e)=> setSearch(e.target.value)}
+          onChange={handleChange}
         />
       </div>
 
