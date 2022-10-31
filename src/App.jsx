@@ -14,6 +14,7 @@ function App() {
     const fetchRepos = async () =>{
       const Response = await fetch('https://api.github.com/users/AbnerHenri/repos')
       const Data = await Response.json()
+
       setInitialRepos(Data)
       setRepos(Data)
     }
@@ -21,11 +22,16 @@ function App() {
     fetchRepos()
   }, [])
 
-  const handleChange = ({ target }) => {
-    const filtred = repos.filter(({ name, language })=>{
-      name.includes(target.value) ||
-      language.includes(target.values)
-    })
+  function handleChange(value){
+
+    if(!value){
+      setRepos(initialRepos)
+      return;
+    }
+
+    console.log(repos.name)
+
+    let filtred = repos.filter((e)=> e.name.startsWith(value))
 
     setRepos(filtred)
   }
@@ -39,7 +45,7 @@ function App() {
           type={'text'}
           placeholder={'Search'} 
           className='Search' 
-          onChange={handleChange}
+          onChange={(e) => handleChange(e.target.value)}
         />
       </div>
 
