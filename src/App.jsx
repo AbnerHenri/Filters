@@ -9,6 +9,7 @@ function App() {
 
   const [initialRepos, setInitialRepos] = useState([])
   const [repos, setRepos] = useState([])
+  const [search, setSearch] = useState('')
 
   useEffect(()=>{
     const fetchRepos = async () =>{
@@ -17,6 +18,8 @@ function App() {
       setInitialRepos(Data)
       setRepos(Data)
     }
+
+    fetchRepos()
   }, [])
 
   return (
@@ -28,14 +31,14 @@ function App() {
           type={'text'}
           placeholder={'Search'} 
           className='Search' 
-          value={search}
+          // value={search}
         />
       </div>
 
       <div className='Cards'>
-        {/* {         
+        {         
           repos.map(e => <Card name={e.name} language={e.language} type={e.visibility} />)
-        } */}
+        }
       </div>
     </div>
   )
